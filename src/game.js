@@ -479,7 +479,7 @@ export function gameLoop(passDiff, options = {}) {
   } else if (!Enslaved.isReleaseTick) {
     Enslaved.nextTickDiff = realDiff;
   }
-  if (diff === undefined) {
+  if (Enslaved.isReleaseTick || diff === undefined) {
     diff = Enslaved.nextTickDiff;
   }
   else diff *= getGlobalSpeedFactor();
